@@ -1,0 +1,50 @@
+{
+    "返回": {
+        "recognition": "TemplateMatch",
+        "template": "back.png",
+        "action": "Click"
+    },
+    "主页": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "action": "Click"
+    },
+    "检查主页": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "action": "DoNothing"
+    },
+    "确认": {
+        "recognition": "TemplateMatch",
+        "template": "good.png",
+        "action": "Click"
+    },
+    "确定": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click"
+    },
+    "取消": {
+        "recognition": "TemplateMatch",
+        "template": "bad.png",
+        "action": "Click"
+    },
+    "不要": {
+        "recognition": "OCR",
+        "expected": "取消",
+        "action": "Click"
+    },
+    "最大": {
+        "recognition": "TemplateMatch",
+        "template": "max.png",
+        "action": "Click"
+    },
+    "最多": {
+        "recognition": "OCR",
+        "expected": "最多",
+        "action": "Click"
+    },
+    "Stop": {
+        "action": "StopTask"
+    }
+}

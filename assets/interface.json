@@ -15,27 +15,18 @@
     ],
     "task": [
         {
-            "name": "进入游戏",
-            "entry": "StartUp"
+            "name": "启动游戏",
+            "entry": "GO"
         },
         {
-            "name": "买买买",
-            "entry": "Shop_Daily",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "日常采购",
+            "entry": "StationShop"
         },
         {
-            "name": "游乐场",
-            "entry": "Playground"
-        },
-        {
-            "name": "有棵树",
-            "entry": "Check_Map",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
+            "name": "测试",
+            "entry": "主界面"
         }
-    ]
+    ],
+    "option": {},
+    "name": "rr"
 }

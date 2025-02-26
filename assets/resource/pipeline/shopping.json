@@ -1,0 +1,106 @@
+{
+    "主界面": {
+        "post_delay": 1000,
+        "next": [
+            "商店0",
+            "商店1"
+        ],
+        "interrupt": [
+            "主页"
+        ]
+    },
+    "商店0": {
+        "post_delay": 2000,
+        "recognition": "TemplateMatch",
+        "template": "shop_0.png",
+        "pre_delay": 1000,
+        "action": "Click",
+        "roi": [
+            914,
+            15,
+            65,
+            60
+        ],
+        "next": [
+            "黑月总店"
+        ],
+        "interrupt": [
+            "主界面"
+        ]
+    },
+    "商店1": {
+        "post_delay": 2000,
+        "recognition": "TemplateMatch",
+        "template": "shop_1.png",
+        "pre_delay": 1000,
+        "action": "Click",
+        "roi": [
+            914,
+            15,
+            65,
+            60
+        ],
+        "next": [
+            "黑月总店"
+        ],
+        "interrupt": [
+            "主界面"
+        ]
+    },
+    "黑月总店": {
+        "recognition": "TemplateMatch",
+        "template": "shop_2.png",
+        "action": "Click",
+        "next": [
+            "买体力"
+        ]
+    },
+    "买体力": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "DailyShop_hp",
+        "next": [
+            "买疲劳"
+        ]
+    },
+    "买疲劳": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "DailyShop_mp",
+        "next": [
+            "买进货采买书"
+        ]
+    },
+    "买进货采买书": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "Station_w_book",
+        "next": [
+            "买周协议"
+        ]
+    },
+    "买周协议": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "Station_w_agreement",
+        "next": [
+            "买月协议"
+        ]
+    },
+    "买月协议": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "Station_m_agreement",
+        "next": [
+            "买石头"
+        ]
+    },
+    "买石头": {
+        "pre_delay": 3000,
+        "action": "Custom",
+        "custom_action": "Station_stone",
+        "next": [
+            "Stop"
+        ]
+    }
+}

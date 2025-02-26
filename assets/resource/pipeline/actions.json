@@ -1,0 +1,12 @@
+{
+    "AllMax": {
+        "recognition": "OCR",
+        "expected": "最大",
+        "action": "Click"
+    },
+    "BuyThat": {
+        "recognition": "OCR",
+        "expected": "取消",
+        "action": "Click"
+    }
+}

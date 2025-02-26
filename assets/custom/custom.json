@@ -1,0 +1,37 @@
+{
+    "ChooseMax": {
+        "type": "action",
+        "class": "ChooseMax",
+        "file_path": "{custom_path}\\action\\basics\\ChooseMax.py"
+    },
+    "DailyShop_hp": {
+        "type": "action",
+        "class": "DailyShop_hp",
+        "file_path": "{custom_path}\\action\\basics\\DailyShop_hp.py"
+    },
+    "DailyShop_mp": {
+        "type": "action",
+        "class": "DailyShop_mp",
+        "file_path": "{custom_path}\\action\\basics\\DailyShop_mp.py"
+    },
+    "Station_w_book": {
+        "type": "action",
+        "class": "Station_w_book",
+        "file_path": "{custom_path}\\action\\basics\\Station_w_book.py"
+    },
+    "Station_m_agreement": {
+        "type": "action",
+        "class": "Station_m_agreement",
+        "file_path": "{custom_path}\\action\\basics\\Station_m_agreement.py"
+    },
+    "Station_w_agreement": {
+        "type": "action",
+        "class": "Station_w_agreement",
+        "file_path": "{custom_path}\\action\\basics\\Station_w_agreement.py"
+    },
+    "Station_stone": {
+        "type": "action",
+        "class": "Station_stone",
+        "file_path": "{custom_path}\\action\\basics\\Station_stone.py"
+    }
+}

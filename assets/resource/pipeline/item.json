@@ -1,0 +1,38 @@
+{
+    "Station_hp": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            748,
+            452,
+            161,
+            69
+        ],
+        "template": "Station_hp.png"
+    },
+    "Station_mp": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            1140,
+            452,
+            104,
+            72
+        ],
+        "template": "Station_mp.png"
+    },
+    "Station_w_book": {
+        "recognition": "TemplateMatch",
+        "template": "Station_w_book.png"
+    },
+    "Station_m_agreement": {
+        "recognition": "TemplateMatch",
+        "template": "Station_m_agreement.png"
+    },
+    "Station_w_agreement": {
+        "recognition": "TemplateMatch",
+        "template": "Station_w_agreement.png"
+    },
+    "Station_stone": {
+        "recognition": "TemplateMatch",
+        "template": "Station_stone.png"
+    }
+}

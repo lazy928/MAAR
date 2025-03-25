@@ -63,6 +63,9 @@
             "D_StarCloud",
             "D_Film",
             "D_Tape"
+        ],
+        "interrupt": [
+            "Stop"
         ]
     },
     "D_Stone": {

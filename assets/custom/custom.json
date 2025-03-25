@@ -1,37 +1,22 @@
 {
-    "ChooseMax": {
+    "Daily_stone": {
         "type": "action",
-        "class": "ChooseMax",
-        "file_path": "{custom_path}\\action\\basics\\ChooseMax.py"
+        "class": "Daily_stone",
+        "file_path": "{custom_path}\\action\\basics\\Daily_stone.py"
     },
-    "DailyShop_hp": {
+    "Daily_cloud_4": {
         "type": "action",
-        "class": "DailyShop_hp",
-        "file_path": "{custom_path}\\action\\basics\\DailyShop_hp.py"
+        "class": "Daily_cloud_4",
+        "file_path": "{custom_path}\\action\\basics\\Daily_cloud_4.py"
     },
-    "DailyShop_mp": {
+    "Daily_film": {
         "type": "action",
-        "class": "DailyShop_mp",
-        "file_path": "{custom_path}\\action\\basics\\DailyShop_mp.py"
+        "class": "Daily_film",
+        "file_path": "{custom_path}\\action\\basics\\Daily_film.py"
     },
-    "Station_w_book": {
+    "Daily_tape": {
         "type": "action",
-        "class": "Station_w_book",
-        "file_path": "{custom_path}\\action\\basics\\Station_w_book.py"
-    },
-    "Station_m_agreement": {
-        "type": "action",
-        "class": "Station_m_agreement",
-        "file_path": "{custom_path}\\action\\basics\\Station_m_agreement.py"
-    },
-    "Station_w_agreement": {
-        "type": "action",
-        "class": "Station_w_agreement",
-        "file_path": "{custom_path}\\action\\basics\\Station_w_agreement.py"
-    },
-    "Station_stone": {
-        "type": "action",
-        "class": "Station_stone",
-        "file_path": "{custom_path}\\action\\basics\\Station_stone.py"
+        "class": "Daily_tape",
+        "file_path": "{custom_path}\\action\\basics\\Daily_tape.py"
     }
 }

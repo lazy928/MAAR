@@ -1,38 +1,18 @@
 {
-    "Station_hp": {
+    "Dailystone": {
         "recognition": "TemplateMatch",
-        "roi": [
-            748,
-            452,
-            161,
-            69
-        ],
-        "template": "Station_hp.png"
+        "template": "Dailystone.png"
     },
-    "Station_mp": {
+    "Dailycloud": {
         "recognition": "TemplateMatch",
-        "roi": [
-            1140,
-            452,
-            104,
-            72
-        ],
-        "template": "Station_mp.png"
+        "template": "Dailycloud.png"
     },
-    "Station_w_book": {
+    "Dailyfilm": {
         "recognition": "TemplateMatch",
-        "template": "Station_w_book.png"
+        "template": "Dailyfilm.png"
     },
-    "Station_m_agreement": {
+    "Dailytape": {
         "recognition": "TemplateMatch",
-        "template": "Station_m_agreement.png"
-    },
-    "Station_w_agreement": {
-        "recognition": "TemplateMatch",
-        "template": "Station_w_agreement.png"
-    },
-    "Station_stone": {
-        "recognition": "TemplateMatch",
-        "template": "Station_stone.png"
+        "template": "Dailytape.png"
     }
 }

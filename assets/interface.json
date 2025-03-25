@@ -20,13 +20,9 @@
         },
         {
             "name": "日常采购",
-            "entry": "StationShop"
-        },
-        {
-            "name": "测试",
-            "entry": "主界面"
+            "entry": "MainPage"
         }
     ],
     "option": {},
-    "name": "rr"
+    "name": "cc"
 }

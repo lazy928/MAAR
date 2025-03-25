@@ -5,7 +5,7 @@
         ],
         "interrupt": [
             "Click_Blank",
-            "Click_Blank1",
+            "Daily_Receive",
             "Daily_Singature",
             "Entry_Game",
             "Notice",
@@ -15,11 +15,13 @@
         ]
     },
     "WakeUp": {
+        "post_wait_freezes": 3000,
         "post_delay": 1000,
         "action": "StartApp",
         "package": "com.hermes.goda/com.hermes.goda.MainActivity"
     },
     "StartUp": {
+        "post_wait_freezes": 3000,
         "post_delay": 1000,
         "next": [
             "UpLoad",
@@ -32,15 +34,16 @@
         ]
     },
     "UpLoad": {
+        "post_wait_freezes": 3000,
         "pre_delay": 3000,
         "recognition": "OCR",
         "expected": "确认",
         "action": "Click"
     },
     "Download_Finish": {
-        "pre_delay": 3000,
+        "post_wait_freezes": 3000,
         "recognition": "OCR",
-        "expected": "下载已经完成，点击任意位置进入游戏",
+        "expected": "下载已经完成",
         "action": "Click"
     },
     "Notice": {
@@ -62,36 +65,47 @@
         "action": "Click"
     },
     "Daily_Singature": {
+        "post_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "触碰空白区域退出",
         "action": "Click"
     },
     "Click_Blank": {
+        "post_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "触碰空白区域退出",
         "action": "Click"
     },
-    "Click_Blank1": {
+    "Daily_Receive": {
+        "post_wait_freezes": 3000,
         "recognition": "OCR",
-        "expected": "触碰空白区域退出",
-        "action": "Click"
+        "expected": "^领取$",
+        "action": "Click",
+        "target": [
+            500,
+            700,
+            0,
+            0
+        ]
     },
     "CLoseApp": {
         "action": "StopApp",
         "package": "com.hermes.goda/com.hermes.goda.MainActivity"
     },
     "CheckMain": {
+        "post_wait_freezes": 3000,
         "recognition": "OCR",
         "roi": [
-            1170,
-            650,
-            40,
-            22
+            500,
+            700,
+            0,
+            0
         ],
         "expected": "启程",
         "action": "StopTask"
     },
     "CheckCity": {
+        "post_wait_freezes": 3000,
         "post_delay": 2000,
         "recognition": "OCR",
         "expected": "访问城市",
@@ -100,6 +114,7 @@
         ]
     },
     "Reload": {
+        "post_wait_freezes": 3000,
         "action": "StopApp",
         "package": "com.hermes.goda/com.hermes.goda.MainActivity",
         "next": [

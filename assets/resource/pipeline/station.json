@@ -1,217 +1,126 @@
 {
-    "StationShop": {
+    "MainPage": {
         "post_delay": 1000,
         "next": [
-            "商城0",
-            "商城1"
+            "Shop_0",
+            "Shop_1"
         ],
         "interrupt": [
-            "主页"
+            "Home"
         ]
     },
-    "商城0": {
+    "Shop_0": {
         "post_delay": 2000,
         "recognition": "TemplateMatch",
         "template": "shop_0.png",
         "pre_delay": 1000,
         "action": "Click",
         "roi": [
-            914,
-            15,
-            65,
-            60
+            905,
+            8,
+            80,
+            80
         ],
         "next": [
-            "总店"
+            "HeadOffice"
         ],
         "interrupt": [
-            "StationShop"
+            "MainPage"
         ]
     },
-    "商城1": {
-        "post_delay": 2000,
+    "Shop_1": {
+        "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": "shop_1.png",
         "pre_delay": 1000,
         "action": "Click",
         "roi": [
-            914,
-            15,
-            65,
-            60
+            905,
+            8,
+            80,
+            80
         ],
         "next": [
-            "总店"
+            "HeadOffice"
         ],
         "interrupt": [
-            "StationShop"
+            "MainPage"
         ]
     },
-    "总店": {
+    "HeadOffice": {
+        "post_delay": 1000,
         "recognition": "TemplateMatch",
         "template": "shop_2.png",
         "action": "Click",
         "next": [
-            "体力",
-            "疲劳",
-            "Stop"
+            "BlackShop"
         ]
     },
-    "体力": {
-        "post_delay": 1000,
+    "BlackShop": {
+        "pre_delay": 500,
+        "next": [
+            "D_Stone",
+            "D_StarCloud",
+            "D_Film",
+            "D_Tape"
+        ]
+    },
+    "D_Stone": {
         "recognition": "TemplateMatch",
-        "template": "Station_hp.png",
-        "action": "Click",
+        "roi": [
+            750,
+            185,
+            160,
+            80
+        ],
+        "template": "Dailystone.png",
+        "action": "Custom",
+        "custom_action": "Daily_stone",
         "next": [
-            "买完体力"
+            "BlackShop"
         ]
     },
-    "买完体力": {
-        "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要体力"
-        ]
-    },
-    "不要体力": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
-        "next": [
-            "疲劳",
-            "进货采买书",
-            "Stop"
-        ]
-    },
-    "疲劳": {
-        "post_wait_freezes": 1000,
+    "D_StarCloud": {
         "recognition": "TemplateMatch",
-        "template": "Station_mp.png",
-        "action": "Click",
+        "roi": [
+            750,
+            185,
+            160,
+            80
+        ],
+        "template": "Dailycloud.png",
+        "action": "Custom",
+        "custom_action": "Daily_cloud_4",
         "next": [
-            "买完疲劳"
+            "BlackShop"
         ]
     },
-    "买完疲劳": {
-        "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要疲劳"
-        ]
-    },
-    "不要疲劳": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
-        "next": [
-            "进货采买书",
-            "月度协议",
-            "Stop"
-        ]
-    },
-    "进货采买书": {
-        "post_wait_freezes": 1000,
+    "D_Film": {
         "recognition": "TemplateMatch",
-        "template": "Station_w_book.png",
-        "action": "Click",
+        "roi": [
+            752,
+            185,
+            160,
+            80
+        ],
+        "template": "Dailyfilm.png",
+        "action": "Custom",
+        "custom_action": "Daily_film",
         "next": [
-            "买完书"
+            "BlackShop"
         ]
     },
-    "买完书": {
+    "D_Tape": {
         "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要书"
-        ]
-    },
-    "不要书": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
-        "next": [
-            "月度协议",
-            "周度协议",
-            "Stop"
-        ]
-    },
-    "月度协议": {
-        "post_wait_freezes": 1000,
-        "recognition": "TemplateMatch",
-        "template": "Station_m_agreement.png",
-        "action": "Click",
-        "next": [
-            "买完月"
-        ]
-    },
-    "买完月": {
-        "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要月"
-        ]
-    },
-    "不要月": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
-        "next": [
-            "周度协议",
-            "每日桦石",
-            "Stop"
-        ]
-    },
-    "周度协议": {
-        "post_wait_freezes": 1000,
-        "recognition": "TemplateMatch",
-        "template": "Station_w_agreement.png",
-        "action": "Click",
-        "next": [
-            "买完周"
-        ]
-    },
-    "买完周": {
-        "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要周"
-        ]
-    },
-    "不要周": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
-        "next": [
-            "每日桦石",
-            "Stop"
-        ]
-    },
-    "每日桦石": {
-        "post_wait_freezes": 1000,
-        "recognition": "TemplateMatch",
-        "template": "Station_stone.png",
-        "action": "Click",
-        "next": [
-            "买完石"
-        ]
-    },
-    "买完石": {
-        "recognition": "OCR",
-        "expected": "最多",
-        "action": "Click",
-        "next": [
-            "不要石"
-        ]
-    },
-    "不要石": {
-        "recognition": "OCR",
-        "expected": "取消",
-        "action": "Click",
+        "roi": [
+            752,
+            185,
+            160,
+            80
+        ],
+        "expected": "空白录像带",
+        "action": "Custom",
+        "custom_action": "Daily_tape",
         "next": [
             "Stop"
         ]

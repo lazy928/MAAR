@@ -1,15 +1,15 @@
 {
-    "返回": {
+    "Back": {
         "recognition": "TemplateMatch",
         "template": "back.png",
         "action": "Click"
     },
-    "主页": {
+    "Home": {
         "recognition": "TemplateMatch",
         "template": "home.png",
         "action": "Click"
     },
-    "检查主页": {
+    "Ch_Home": {
         "recognition": "TemplateMatch",
         "template": "home.png",
         "action": "DoNothing"

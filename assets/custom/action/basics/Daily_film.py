@@ -3,26 +3,27 @@ from maa.custom_action import CustomAction
 import time
 
     
-class Station_stone(CustomAction):
+class Daily_film(CustomAction):
     # 识别当前物品，再点击物品
     def run(
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult:
         image = context.tasker.controller.post_screencap().wait().get()
-        stone = context.run_recognition("Station_stone", image)
-        if stone:
+        film = context.run_recognition("Dailyfilm", image)
+        if film:
             x,y = (
-                stone.best_result.box[0] + stone.best_result.box[2] // 2,
-                stone.best_result.box[1] + stone.best_result.box[3] // 2,
+                film.best_result.box[0] + film.best_result.box[2] // 2,
+                film.best_result.box[1] + film.best_result.box[3] // 2,
             )
             context.tasker.controller.post_click(x, y).wait()
             time.sleep(2)
             context.tasker.controller.post_click(888,380).wait()
-            time.sleep(2)
-            context.tasker.controller.post_click(888,380).wait()
             time.sleep(1)
             context.tasker.controller.post_click(888,380).wait()
-            time.sleep(2)
-            context.tasker.controller.post_click(269,510).wait()
             time.sleep(1)
+            context.tasker.controller.post_click(900,520).wait()
+            time.sleep(1)
+            context.tasker.controller.post_click(690,160).wait()
             image = context.tasker.controller.post_screencap().wait().get()
+            context.run_pipeline(entry="BlackShop")
+        return CustomAction.RunResult(success=True)

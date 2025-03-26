@@ -1,7 +1,32 @@
 {
     "GO": {
+        "post_wait_freezes": 2000,
         "next": [
             "CheckCity"
+        ],
+        "interrupt": [
+            "Click_Blank",
+            "Daily_Receive",
+            "Entry_Game",
+            "Download_Finish",
+            "UpLoad",
+            "WakeUp"
+        ]
+    },
+    "WakeUp": {
+        "post_delay": 5000,
+        "action": "StartApp",
+        "package": "com.hermes.goda/com.hermes.goda.MainActivity",
+        "next": [
+            "StartUp"
+        ]
+    },
+    "StartUp": {
+        "pre_wait_freezes": 3000,
+        "post_delay": 5000,
+        "next": [
+            "CheckCity",
+            "CheckMain"
         ],
         "interrupt": [
             "Click_Blank",
@@ -9,40 +34,49 @@
             "Daily_Singature",
             "Entry_Game",
             "Notice",
+            "Download_Click",
             "Download_Finish",
-            "UpLoad",
-            "WakeUp"
-        ]
-    },
-    "WakeUp": {
-        "post_wait_freezes": 3000,
-        "post_delay": 1000,
-        "action": "StartApp",
-        "package": "com.hermes.goda/com.hermes.goda.MainActivity"
-    },
-    "StartUp": {
-        "post_wait_freezes": 3000,
-        "post_delay": 1000,
-        "next": [
-            "UpLoad",
-            "Download_Finish",
-            "Notice",
-            "Entry_Game"
-        ],
-        "interrupt": [
-            "Reload"
+            "UpLoad"
         ]
     },
     "UpLoad": {
-        "post_wait_freezes": 3000,
-        "pre_delay": 3000,
+        "pre_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "确认",
         "action": "Click"
     },
     "Download_Finish": {
-        "post_wait_freezes": 3000,
+        "post_delay": 2000,
+        "pre_wait_freezes": 3000,
         "recognition": "OCR",
+        "roi": [
+            460,
+            548,
+            350,
+            35
+        ],
+        "expected": "下载已经完成，点击任意位置进入游戏",
+        "action": "Click",
+        "target": [
+            10,
+            10,
+            0,
+            0
+        ],
+        "next": [
+            "Click_Black"
+        ]
+    },
+    "Download_Click": {
+        "pre_wait_freezes": 3000,
+        "post_delay": 2000,
+        "recognition": "OCR",
+        "roi": [
+            460,
+            548,
+            350,
+            35
+        ],
         "expected": "下载已经完成",
         "action": "Click"
     },
@@ -52,40 +86,38 @@
         "expected": "触碰空白区域退出",
         "action": "Click",
         "target": [
-            598,
-            658,
-            119,
-            25
+            10,
+            10,
+            0,
+            0
         ]
     },
     "Entry_Game": {
-        "post_wait_freezes": 3000,
+        "pre_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "点击屏幕进入游戏",
         "action": "Click"
     },
     "Daily_Singature": {
-        "post_wait_freezes": 3000,
+        "pre_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "触碰空白区域退出",
         "action": "Click"
     },
     "Click_Blank": {
-        "post_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "触碰空白区域退出",
         "action": "Click"
     },
     "Daily_Receive": {
-        "post_wait_freezes": 3000,
         "recognition": "OCR",
         "expected": "^领取$",
         "action": "Click",
         "target": [
             500,
             700,
-            0,
-            0
+            10,
+            10
         ]
     },
     "CLoseApp": {
@@ -98,15 +130,14 @@
         "roi": [
             500,
             700,
-            0,
-            0
+            10,
+            10
         ],
         "expected": "启程",
         "action": "StopTask"
     },
     "CheckCity": {
-        "post_wait_freezes": 3000,
-        "post_delay": 2000,
+        "post_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "访问城市",
         "next": [
@@ -114,14 +145,16 @@
         ]
     },
     "Reload": {
-        "post_wait_freezes": 3000,
         "action": "StopApp",
         "package": "com.hermes.goda/com.hermes.goda.MainActivity",
         "next": [
             "GO"
-        ],
-        "interrupt": [
-            "Stop"
+        ]
+    },
+    "Click_Black": {
+        "action": "Click",
+        "next": [
+            "StartUp"
         ]
     }
 }

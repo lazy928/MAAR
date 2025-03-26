@@ -5,7 +5,7 @@
 
 <div align="center">
 
-# MaaPracticeBoilerplate
+# MaaR
 
 </div>
 

@@ -35,6 +35,7 @@
             "Entry_Game",
             "Notice",
             "Download_Click",
+            "Click_Black",
             "Download_Finish",
             "UpLoad"
         ]
@@ -62,9 +63,6 @@
             10,
             0,
             0
-        ],
-        "next": [
-            "Click_Black"
         ]
     },
     "Download_Click": {
@@ -152,9 +150,9 @@
         ]
     },
     "Click_Black": {
-        "action": "Click",
-        "next": [
-            "StartUp"
-        ]
+        "post_wait_freezes": 1000,
+        "recognition": "OCR",
+        "expected": "^游戏$",
+        "action": "Click"
     }
 }

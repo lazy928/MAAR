@@ -9,6 +9,7 @@ class Daily_stone(CustomAction):
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult:
         image = context.tasker.controller.post_screencap().wait().get()
+        time.sleep(2)
         stone = context.run_recognition("Dailystone", image)
         if stone:
             x,y = (
@@ -26,7 +27,7 @@ class Daily_stone(CustomAction):
             # context.tasker.controller.post_click(270,510).wait()  # 取消
             # time.sleep(1)
             context.tasker.controller.post_click(690,160).wait()  # 获得物品
-            time.sleep(1)
+            time.sleep(2)
             image = context.tasker.controller.post_screencap().wait().get()
             context.run_pipeline(entry="BlackShop")
         return CustomAction.RunResult(success=True)

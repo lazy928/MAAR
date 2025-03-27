@@ -9,6 +9,7 @@ class Daily_film(CustomAction):
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult:
         image = context.tasker.controller.post_screencap().wait().get()
+        time.sleep(2)
         film = context.run_recognition("Dailyfilm", image)
         if film:
             x,y = (
@@ -24,6 +25,7 @@ class Daily_film(CustomAction):
             context.tasker.controller.post_click(900,520).wait()
             time.sleep(1)
             context.tasker.controller.post_click(690,160).wait()
+            time.sleep(2)
             image = context.tasker.controller.post_screencap().wait().get()
             context.run_pipeline(entry="BlackShop")
         return CustomAction.RunResult(success=True)

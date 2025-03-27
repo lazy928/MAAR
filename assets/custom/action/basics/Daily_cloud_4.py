@@ -9,6 +9,7 @@ class Daily_cloud_4(CustomAction):
         self, context: Context, argv: CustomAction.RunArg
     ) -> CustomAction.RunResult:
         image = context.tasker.controller.post_screencap().wait().get()
+        time.sleep(2)
         cloud = context.run_recognition("Dailycloud", image)
         if cloud:
             x,y = (
@@ -24,6 +25,7 @@ class Daily_cloud_4(CustomAction):
             context.tasker.controller.post_click(900,520).wait()
             time.sleep(1)
             context.tasker.controller.post_click(690,160).wait()
+            time.sleep(2)
             image = context.tasker.controller.post_screencap().wait().get()
             context.run_pipeline(entry="BlackShop")
         return CustomAction.RunResult(success=True)

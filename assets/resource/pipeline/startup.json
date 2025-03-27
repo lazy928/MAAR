@@ -23,7 +23,6 @@
     },
     "StartUp": {
         "pre_wait_freezes": 3000,
-        "post_delay": 5000,
         "next": [
             "CheckCity",
             "CheckMain"
@@ -47,7 +46,6 @@
         "action": "Click"
     },
     "Download_Finish": {
-        "post_delay": 2000,
         "pre_wait_freezes": 3000,
         "recognition": "OCR",
         "roi": [
@@ -57,17 +55,17 @@
             35
         ],
         "expected": "下载已经完成，点击任意位置进入游戏",
+        "pre_delay": 3000,
         "action": "Click",
         "target": [
-            10,
-            10,
+            460,
+            540,
             0,
             0
         ]
     },
     "Download_Click": {
         "pre_wait_freezes": 3000,
-        "post_delay": 2000,
         "recognition": "OCR",
         "roi": [
             460,
@@ -76,6 +74,7 @@
             35
         ],
         "expected": "下载已经完成",
+        "pre_delay": 3000,
         "action": "Click"
     },
     "Notice": {
@@ -105,6 +104,7 @@
     "Click_Blank": {
         "recognition": "OCR",
         "expected": "触碰空白区域退出",
+        "pre_delay": 1000,
         "action": "Click"
     },
     "Daily_Receive": {
@@ -153,6 +153,7 @@
         "post_wait_freezes": 1000,
         "recognition": "OCR",
         "expected": "^游戏$",
+        "pre_delay": 1000,
         "action": "Click"
     }
 }
